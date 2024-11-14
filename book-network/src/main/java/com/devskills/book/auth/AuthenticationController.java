@@ -15,12 +15,12 @@ import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-@RestController
-@RequestMapping("auth")
+//@RestController
+//@RequestMapping("auth")
 @RequiredArgsConstructor
 @Tag(name = "Authentication")
 public class AuthenticationController {
-	
+	/*
 	private final AuthenticationService service;
 	
 	@PostMapping("/register")
@@ -45,5 +45,5 @@ public class AuthenticationController {
 	) throws MessagingException {
 		service.activateAccount(token);
 	}
-
+	*/
 }

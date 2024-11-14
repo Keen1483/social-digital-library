@@ -20,8 +20,8 @@ import lombok.RequiredArgsConstructor;
 @EnableMethodSecurity(securedEnabled = true)
 public class SecurityConfig {
 	
-	private final JwtFilter jwtAuthFilter;
-	private final AuthenticationProvider authenticationPrivider;
+	//private final JwtFilter jwtAuthFilter;
+	// private final AuthenticationProvider authenticationPrivider;
 
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -45,11 +45,12 @@ public class SecurityConfig {
 						.anyRequest()
 							.authenticated()
 			)
-			.sessionManagement(session -> session
-					.sessionCreationPolicy(STATELESS)
-			)
-			.authenticationProvider(authenticationPrivider)
-			.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+			.oauth2ResourceServer(auth ->
+					auth.jwt(token -> token.jwtAuthenticationConverter(
+									new KeycloakJwtAuthenticationConverter()
+								)
+							)
+			);
 		return http.build();
 	}
 

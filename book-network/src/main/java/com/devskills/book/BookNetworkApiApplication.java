@@ -19,7 +19,7 @@ public class BookNetworkApiApplication {
 		SpringApplication.run(BookNetworkApiApplication.class, args);
 	}
 	
-	@Bean
+	/* @Bean
 	CommandLineRunner commandLineRunner(
 			RoleRepository roleRepository
 	) {
@@ -30,6 +30,6 @@ public class BookNetworkApiApplication {
 				);
 			}
 		};
-	}
+	} */
 
 }

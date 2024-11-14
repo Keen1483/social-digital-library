@@ -24,10 +24,10 @@ import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-@Service
+//@Service
 @RequiredArgsConstructor
 public class AuthenticationService {
-	
+	/*
 	private final RoleRepository roleRepository;
 	private final PasswordEncoder passwordEncoder;
 	private final UserRepository userRepository;
@@ -128,5 +128,5 @@ public class AuthenticationService {
 		tokenRepository.save(savedToken);
 		
 	}
-
+	*/
 }

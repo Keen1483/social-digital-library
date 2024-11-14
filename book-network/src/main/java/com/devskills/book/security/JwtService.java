@@ -17,7 +17,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 
-@Service
+//@Service
 public class JwtService {
 	
 	@Value("${application.security.jwt.expiration}")

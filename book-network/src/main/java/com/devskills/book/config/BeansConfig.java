@@ -24,6 +24,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class BeansConfig {
 	
+	/*
 	private final UserDetailsService userDetailsService;
 
 	@Bean
@@ -42,13 +43,13 @@ public class BeansConfig {
 	}
 	
 	@Bean
-	AuditorAware<Integer> auditorAware() {
-		return new ApplicationAuditAware();
-	}
-
-	@Bean
 	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
+	} */
+	
+	@Bean
+	AuditorAware<String> auditorAware() {
+		return new ApplicationAuditAware();
 	}
 	
 	@Bean
